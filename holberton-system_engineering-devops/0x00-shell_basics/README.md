@@ -1,1 +1,0 @@
-PowerShell is an interactive Command-Line Interface (CLI) and automation engine designed by Microsoft to help design system configurations and automate administrative tasks. This tool has its own command-line with a unique programming language similar to Perl
