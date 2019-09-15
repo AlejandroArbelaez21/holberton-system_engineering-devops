@@ -1,2 +1,2 @@
 #!/bin/bash
-find -L -type f | head -n10
+find -H -type f | head -n10
