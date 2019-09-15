@@ -1,0 +1,2 @@
+#!/bin/bash
+perl -p -e "s[A][Z]g" | perl -p -e "s[c][e]g"
