@@ -1,2 +1,2 @@
 #!/bin/bash
-finf
+find ./ -H -type f | head -n10
