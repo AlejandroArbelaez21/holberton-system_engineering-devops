@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This script is displaying the content of the current directory without the first dash
+LS=$(find . | cut -d "-" -f 2 | tr -d "./")
+for i in $LS
+do
+  echo "$i"
+done
