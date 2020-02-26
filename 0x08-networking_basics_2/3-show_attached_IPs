@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# This script displaying the IP address that is active in the machine
+ifconfig | awk -F "[: ]+" '/inet addr:/ {print $4}'
