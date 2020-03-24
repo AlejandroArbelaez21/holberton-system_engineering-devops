@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#This script configure my file
+ssh-copy-id -i ~/.ssh/holberton ubuntu@34.74.141.15
