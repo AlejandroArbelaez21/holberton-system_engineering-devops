@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#This script creates an RSA key pair.
+ssh-keygen -b 4096 << EOF
+holberton
+betty
+betty
+EOF
