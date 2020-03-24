@@ -1,3 +1,13 @@
 #!/usr/bin/env bash
 #This script configure my file
-ssh-copy-id -i ~/.ssh/holberton ubuntu@34.74.141.15
+if [ -f ~/.ssh/ssh_config ];
+then
+echo "Host holberton" >> ~/.ssh/ssh_config
+echo "    IdentityFile ~/.ssh/holberton" >> ~/.ssh/ssh_config
+echo "    PasswordAuthentication no" >> ~/.ssh/ssh_config
+else
+touch ~/.ssh/ssh_config
+echo "Host holberton" >> ~/.ssh/ssh_config
+echo "    IdentityFile ~/.ssh/holberton" >> ~/.ssh/ssh_config
+echo "    PasswordAuthentication no" >> ~/.ssh/ssh_config
+fi
