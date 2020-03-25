@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#This script configures a machine with respect above requirements
+sudo apt-get -y install nginx
+sudo ufw allow 'Nginx HTTP'
+sudo echo "Holberton School" > /var/www/html/index.html
