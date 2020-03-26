@@ -2,6 +2,5 @@
 #This script configures a machine with respect above requirements
 sudo apt-get update
 sudo apt-get -y install nginx
-sudo sed -i '/server_name _;/a\\trewrite ^/(.*)$ https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
-sudo sed -i "s/server_name _;/server_name alejandroarbelaezdev.tech;/" /etc/nginx/sites-available/default
+sudo sed -i '/server_name _;/a\\trewrite ^/redirect_me/ https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
 sudo service nginx restart
