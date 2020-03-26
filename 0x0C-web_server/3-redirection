@@ -5,7 +5,6 @@ sudo apt-get -y install nginx
 sudo service nginx start
 sudo chmod 777 /var/www/html/index.nginx-debian.html
 echo "Holberton School" > /var/www/html/index.nginx-debian.html
-other_string="return 301 www.youtube.com;"
-new_string="server_name alejandroarbelaezdev.tech;\n\t$other_string"
-sudo sed -i "s/server_name _;/$new_string/" /etc/nginx/sites-available/default
-sudo systemctl restart nginx
+sudo sed -i '/server_name _;/a      rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 perm$
+sudo sed -i "s/server_name _;/server_name alejandroarbelaezdev.tech;/" /etc/nginx/sites-available/defau$
+sudo service nginx start
