@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #This script configures a machine with respect above requirements
-apt-get update && apt-get upgrade -y
-apt-get install haproxy -y
+sudo apt-get update && apt-get upgrade -y
+sudo apt-get install haproxy -y
 echo "frontend http_front
         bind *:80
         stats uri /haproxy?stats
@@ -11,4 +11,4 @@ echo "backend http_back
         balance roundrobin
         server 1158-web-01 34.74.97.231:80 check
         server 1158-web-02 35.227.41.101:80 check" >> /etc/haproxy/haproxy.cfg
-service haproxy restart
+sudo service haproxy restart
