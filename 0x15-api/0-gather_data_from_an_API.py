@@ -17,7 +17,7 @@ if __name__ == "__main__":
         'https://jsonplaceholder.typicode.com/todos?userId={}'.format(
          employee_id)).json()
     name = r.get('name')
-    titles = []
+    title = []
     titles_com = []
     n = 0
     for task in r_todos:
@@ -25,6 +25,6 @@ if __name__ == "__main__":
         if task['completed'] is True:
             n += 1
             titles_com.append(task.get('title'))
-    print("Employee {} is done with tasks({}/{})".format(name, n, len(titles)))
-    for title in titles_com:
-        print("\t {}".format(title))
+    print("Employee {} is done with tasks({}/{}):".format(name, n, len(title)))
+    for titles in titles_com:
+        print("\t {}".format(titles))
