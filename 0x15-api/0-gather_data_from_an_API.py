@@ -21,7 +21,7 @@ if __name__ == "__main__":
     titles_com = []
     n = 0
     for task in r_todos:
-        titles.append(task.get('title'))
+        title.append(task.get('title'))
         if task['completed'] is True:
             n += 1
             titles_com.append(task.get('title'))
