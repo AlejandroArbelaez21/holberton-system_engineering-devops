@@ -27,4 +27,3 @@ if __name__ == "__main__":
         my_list.append(other_dict)
     with open("{}.json".format(employee_id), 'w', encoding="utf-8") as file:
         file.write(json.dumps(my_dict))
-    
