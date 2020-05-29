@@ -4,3 +4,9 @@ exec {'Sky_is_the_limit':
   path    => ['/usr/bin', '/usr/sbin', '/bin'],
   command => "sed -i 's/15/4096/g' /etc/default/nginx",
 }
+
+exec {'restart_ngnix':
+  provider => shell,
+  command => "sudo service nginx restart",
+}
+
