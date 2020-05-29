@@ -1,5 +1,5 @@
 #change the wrong number of request
-exec {'change request number':
+exec {'change_number_of_request':
   provider => shell,
   command  => 'sed -i "s/15/2000/g" /etc/default/nginx',
 }
